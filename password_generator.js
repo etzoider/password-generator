@@ -9,7 +9,7 @@ function password_generator(char_amount) {
     const generates_random_num = range => {
         return Math.random() * (range) + 1
     }
-
+    // Verifies if the parameter is a number.
     if (typeof char_amount !== 'number') {
         console.log("Insira um valor numérico.")
     } else {
@@ -30,7 +30,6 @@ function password_generator(char_amount) {
 
         }
     }
-    console.log(this['special_chars'])
 }
 
 password_generator(1)
