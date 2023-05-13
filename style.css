@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600;1,700&family=Kanit:ital,wght@0,200;0,300;0,500;1,600&family=Montserrat:ital,wght@0,100;0,300;0,500;1,200;1,400&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@600&family=Roboto+Slab:wght@100;300;500&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@600&family=Tangerine:wght@700&display=swap');
+
+
+
+:root {
+    --sidebar-blue: rgba(25, 100, 212, 1);
+    --background-grey: rgba(226,232,240,1);
+    --transition-time: 200ms;
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+    width: 100vh;
+    height: 100vh;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body {
+    background-color: var(--sidebar-blue);
+    display:flex;
+    align-items: center;
+}
+
+.wrapper {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    border-radius: 8%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(228, 45, 45, 0.637);
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.title .one,
+.title .two {
+    font-size: 2rem;
+}
+
+.title .one:after{
+    position: absolute;
+    left: 21%;
+    content: 'Password';
+    width: 50%;
+    transition: all 200ms ease-in-out;
+    animation: password 15s linear infinite;
+    
+}
+
+.title .two {
+    position: absolute;
+    right: 21%;
+}
+
+@keyframes password {
+    2% {
+        content: 'P*assword'
+    }
+    4% {
+        content: 'P* *sword'
+    }
+    5% {
+        content: 'P* * *word'
+    }
+    6% {
+        content: 'P* * **ord'
+    }
+    7% {
+        content: 'P*****rd'
+    }
+    8% {
+        content: 'P******d'
+    }
+    10% {
+        content: 'Password'
+    }
+
+    80% {
+        content: 'P4z$w*rD';
+    }
+    84% {
+        content: 'P4z$w*rD';
+    }
+    85% {
+        content: 'Password';
+    }
+}
+
+.checkbox-wrapper {
+    display: inherit;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.checkbox {
+    border: 1px solid black;
+    padding: 2% 4%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5%;
+    transition: all 200ms ease-in-out;
+}

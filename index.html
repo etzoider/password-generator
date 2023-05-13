@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="return generatePassword" class="wrapper">
+
+
+        <div class="title"><div class="one"></div><div class="two">Generator</div></div>
+
+        <div class="checkbox-wrapper">
+
+            <div class="checkbox">
+                <label for="allowSpecial">Special chars</label>
+                <input type="checkbox" id="allowSpecial">
+            </div>
+
+            <div class="checkbox">
+                <label for="allowLetters">Letters</label>
+                <input type="checkbox" id="allowLetters">
+            </div>
+
+            <div class="checkbox">
+                <label for="allowNumbers">Numbers</label>
+                <input type="checkbox" id="allowNumbers">
+            </div>
+
+        </div>
+
+        <input type="text" contenteditable="false" class="password">
+
+        <button type="submit"></button>
+    </form>
+
+
+</body>
+<script src="password_generator.js"/>
+</html>
