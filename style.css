@@ -58,10 +58,10 @@ body {
 .title .one:after{
     position: absolute;
     left: 21%;
-    content: 'Password';
+    content: 'P???????';
     width: 50%;
     transition: all 200ms ease-in-out;
-    animation: password 15s linear infinite;
+    animation: password2 20s linear infinite;
     
 }
 
@@ -69,38 +69,180 @@ body {
     position: absolute;
     right: 21%;
 }
+@keyframes password2 {
+    0% {
+        content: 'P???????';
+    }
+    1% {
+        content: 'Pa??????';
+    }
+    2% {
+        content: 'Pas?????';
+    }
+    3% {
+        content: 'Pass????';
+    }
+    4% {
+        content: 'Passw???';
+    }
+    5% {
+        content: 'Passwo??';
+    }
+    6% {
+        content: 'Passwor?';
+    }
+    7% {
+        content: 'Password';
+    }
+    15% {
+        content: 'Password';
+    }
+    16% {
+        content: 'Passwor?';
+    }
+    17% {
+        content: 'Passwo??';
+    }
+    18% {
+        content: 'Passw???';
+    }
+    19% {
+        content: 'Pass????';
+    }
+    20% {
+        content: 'Pas?????';
+    }
+    21% {
+        content: 'Pa??????';
+    }
+    22% {
+        content: 'P???????';
+    }
+    25% {
+        content: 'P???????';
+    }
+    26% {
+        content: 'Pa??????';
+    }
+    27% {
+        content: 'Pas?????';
+    }
+    28% {
+        content: 'Pass????';
+    }
+    29% {
+        content: 'Passw???';
+    }
+    30% {
+        content: 'Passwo??';
+    }
+    31% {
+        content: 'Passwor?';
+    }
+    32% {
+        content: 'Password';
+
+    }
+     
+    
+    40% {
+        content: 'P*assword'
+    }
+    41% {
+        content: 'P* *sword';
+        opacity:0.4;
+        color: blue;
+    }
+    43% {
+        content: 'P* * *word';
+        color: red;
+    }
+    45% {
+        content: 'P* * **ord';
+        opacity:0.4;
+    }
+    47% {
+        content: 'P*****rd'
+    }
+    49% {
+        content: 'P******d';
+        opacity:0.4;
+    }
+    50% {
+        content: 'Password';
+        opacity:1;
+        color: black;
+
+    }
+
+    80% {
+        content: 'P4z$w*rD';
+        color: blue;
+    }
+    84% {
+        content: 'P4z$w*rD';
+        opacity:0.4;
+        color: white;
+    }
+    85% {
+        content: 'Password';
+        color: black;
+        opacity:1;
+    }
+
+    90% {
+        content:'Passwo??'
+    }
+    95% {
+        content: 'Pas?????'
+    }
+}
+
 
 @keyframes password {
     2% {
         content: 'P*assword'
     }
     4% {
-        content: 'P* *sword'
+        content: 'P* *sword';
+        opacity:0.4;
+        color: blue;
     }
     5% {
-        content: 'P* * *word'
+        content: 'P* * *word';
+        color: red;
     }
     6% {
-        content: 'P* * **ord'
+        content: 'P* * **ord';
+        opacity:0.4;
     }
     7% {
         content: 'P*****rd'
     }
     8% {
-        content: 'P******d'
+        content: 'P******d';
+        opacity:0.4;
     }
     10% {
-        content: 'Password'
+        content: 'Password';
+        opacity:1;
+        color: black;
+
     }
 
     80% {
         content: 'P4z$w*rD';
+        color: blue;
     }
     84% {
         content: 'P4z$w*rD';
+        opacity:0.4;
+        color: white;
     }
     85% {
         content: 'Password';
+        color: black;
+        opacity:1;
     }
 }
 
