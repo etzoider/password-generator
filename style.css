@@ -38,7 +38,7 @@ body {
     right: 25%;
     border-radius: 8%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.4);
     width: 50vw;
     height: 50vh;
     background-color: rgba(228, 45, 45, 0.637);
@@ -69,6 +69,60 @@ body {
     position: absolute;
     right: 21%;
 }
+    
+.checkbox-wrapper {
+    display: inherit;
+    width: 80%;
+    height:50%;
+    margin-bottom: -10%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.checkbox {
+    border: 1px solid black;
+    padding: 2% 4%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5%;
+    transition: all 200ms ease-in-out;
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkbox:hover,
+.checkbox label:hover {
+    transform:scale(1.02);
+    cursor:pointer;
+}
+
+.checkbox input[type=checkbox]:checked {
+    color: white;   
+    transform: scale(2); 
+}
+
+.password {
+    margin-top: 5%;
+}
+
+
+.submit-btn {
+    background-color: orange;
+    width: 20%;
+    height: 12%;
+}
+
+
+
+
+
+
+
+
+
+
 @keyframes password2 {
     0% {
         content: 'P???????';
@@ -151,11 +205,9 @@ body {
     41% {
         content: 'P* *sword';
         opacity:0.4;
-        color: blue;
     }
     43% {
         content: 'P* * *word';
-        color: red;
     }
     45% {
         content: 'P* * **ord';
@@ -171,13 +223,11 @@ body {
     50% {
         content: 'Password';
         opacity:1;
-        color: black;
 
     }
 
     80% {
         content: 'P4z$w*rD';
-        color: blue;
     }
     84% {
         content: 'P4z$w*rD';
@@ -198,67 +248,4 @@ body {
     }
 }
 
-
-@keyframes password {
-    2% {
-        content: 'P*assword'
-    }
-    4% {
-        content: 'P* *sword';
-        opacity:0.4;
-        color: blue;
-    }
-    5% {
-        content: 'P* * *word';
-        color: red;
-    }
-    6% {
-        content: 'P* * **ord';
-        opacity:0.4;
-    }
-    7% {
-        content: 'P*****rd'
-    }
-    8% {
-        content: 'P******d';
-        opacity:0.4;
-    }
-    10% {
-        content: 'Password';
-        opacity:1;
-        color: black;
-
-    }
-
-    80% {
-        content: 'P4z$w*rD';
-        color: blue;
-    }
-    84% {
-        content: 'P4z$w*rD';
-        opacity:0.4;
-        color: white;
-    }
-    85% {
-        content: 'Password';
-        color: black;
-        opacity:1;
-    }
-}
-
-.checkbox-wrapper {
-    display: inherit;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;
     
-
-}
-
-.checkbox {
-    border: 1px solid black;
-    padding: 2% 4%;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 5%;
-    transition: all 200ms ease-in-out;
-}

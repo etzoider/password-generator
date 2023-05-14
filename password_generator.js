@@ -1,3 +1,10 @@
+
+const checkboxes = document.q
+
+
+
+
+
 function password_generator(char_amount) {
     if (typeof char_amount != 'number') {
         return (`"${char_amount}" is not a valid amount. Please, insert a numeric value.`)
