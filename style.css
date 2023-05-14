@@ -75,32 +75,35 @@ body {
     width: 80%;
     height:50%;
     margin-bottom: -10%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
 
 .checkbox {
     border: 1px solid black;
-    padding: 2% 4%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(200,200,200,0.8);
     border-radius: 5%;
-    transition: all 200ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    width: 30%;
+    height: 25%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3rem
 }
 
-.checkbox input[type=checkbox] {
-    display: none;
+.checkbox.checked {
+    background-color: rgba(0,200,0,0.5);
+    border: 2px solid rgba(0,0,0,1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+
+
+
 }
 
-.checkbox:hover,
-.checkbox label:hover {
-    transform:scale(1.02);
-    cursor:pointer;
-}
-
-.checkbox input[type=checkbox]:checked {
-    color: white;   
-    transform: scale(2); 
+.char-amount {
+    margin-top: 5%;
 }
 
 .password {
@@ -204,14 +207,14 @@ body {
     }
     41% {
         content: 'P* *sword';
-        opacity:0.4;
+        opacity:0.3;
     }
     43% {
         content: 'P* * *word';
     }
     45% {
         content: 'P* * **ord';
-        opacity:0.4;
+        opacity:0.6;
     }
     47% {
         content: 'P*****rd'
@@ -231,7 +234,7 @@ body {
     }
     84% {
         content: 'P4z$w*rD';
-        opacity:0.4;
+        opacity:0.5;
         color: white;
     }
     85% {

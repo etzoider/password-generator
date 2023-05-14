@@ -9,36 +9,36 @@
 </head>
 <body>
 
-    <form action="return generatePassword" class="wrapper">
+    <div class="wrapper">
 
 
         <div class="title"><div class="one"></div><div class="two">Generator</div></div>
 
         <div class="checkbox-wrapper">
 
-            <div class="checkbox">
-                <label for="allowSpecial">Special chars</label>
-                <input type="checkbox" id="allowSpecial">
+            <div class="checkbox" id="symbols">
+                Symbols
             </div>
 
-            <div class="checkbox">
-                <label for="allowLetters">Letters</label>
-                <input type="checkbox" id="allowLetters">
+            <div class="checkbox" id="letters">
+                Letters
             </div>
 
-            <div class="checkbox">
-                <label for="allowNumbers">Numbers</label>
-                <input type="checkbox" id="allowNumbers">
+            <div class="checkbox" id="numbers">
+                Numbers
             </div>
 
         </div>
 
+
+        
         <input type="text" contenteditable="false" class="password">
 
-        <input type="submit" value="Generate" class="submit-btn">
-    </form>
+        <button class="submit-btn">Generate</button>
+        
+    </div>
 
 
 </body>
-<script src="password_generator.js"/>
+<script src="password_generator.js"></script>
 </html>
