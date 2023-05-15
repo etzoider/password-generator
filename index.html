@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f3db5cdc6a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -20,7 +21,7 @@
                 Symbols
             </div>
 
-            <div class="checkbox" id="letters">
+            <div class="checkbox checked" id="letters">
                 Letters
             </div>
 
@@ -32,7 +33,10 @@
 
 
         
-        <input type="text" contenteditable="false" class="password">
+        <div class="pw-wrapper">
+            <input type="text" value="Choose parameters" contenteditable="false" class="password">
+            <img src="./assets/openEye.svg" class="eyeOfSauron open">
+        </div>
 
         <button class="submit-btn">Generate</button>
         

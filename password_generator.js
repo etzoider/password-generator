@@ -78,8 +78,7 @@ const handleCheckboxClick = (e) => {
     
 }
 const displayPassword = (password) => {
-  const display = document.querySelector('.password');
-  display.value = password;
+  pwDisplay.value = password;
 
   
 }
@@ -109,10 +108,43 @@ const handleSubmit = () => {
 }
 
 
+const hidePassword = () => {
 
+}
+
+const showPassword = () => {
+
+}
+
+const toggleEye = () => {
+  const isOpen = eyeOfSauron.classList.contains('open');
+  
+  if (isOpen) {
+    eyeOfSauron.classList.remove('open');
+    eyeOfSauron.classList.add('closed');
+    
+    eyeOfSauron.src = 'assets/closedEye.svg'
+
+    pwDisplay.type = 'password';
+    return
+  }
+  
+  eyeOfSauron.classList.remove('closed');
+  eyeOfSauron.classList.add('open');
+  
+  eyeOfSauron.src = 'assets/openEye.svg'
+  pwDisplay.type = 'text';
+
+  
+}
+
+const pwDisplay = document.querySelector('.password');
 const checkboxes = document.querySelector('.checkbox-wrapper').querySelectorAll('div');
 const submitBtn = document.querySelector(".submit-btn");
+const eyeOfSauron = document.querySelector('.eyeOfSauron');
 
+
+eyeOfSauron.addEventListener('click', () => toggleEye());
 submitBtn.addEventListener('click', () => handleSubmit());
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener('click', (e) => handleCheckboxClick(e))
