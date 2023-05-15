@@ -1,4 +1,5 @@
-const MAX_PASSWORD_LENGTH = 10;
+const MAX_PASSWORD_LENGTH = 12;
+const MIN_PASSWORD_LENGTH = 6
 
 function scrambleString(string) {
     let chars = string.split('');
@@ -34,7 +35,7 @@ function uglifyString(string) {
     return result;
 }
 
-const chooseRandomNumber = (maxRange) => { //range is non-inclusive. (10) will return from 0 to 9 because math.floor
+const chooseRandomNumber = (range) => { //range is non-inclusive. func(10) will return from 0 to 9 because math.floor
     return Math.floor(Math.random() * (range))
 }
 
@@ -50,24 +51,23 @@ function password_generator(availableChars, charAmount) {
 
 
     let password = []
+    let randomIndex;
+    let randomChar;
 
-    while (password.length < charAmount) {
-        const randomIndex = chooseRandomNumber
+    for (let i=0;i<charAmount;i++) {
+
+      randomIndex = chooseRandomNumber(availableChars.length);
+      randomChar = availableChars[randomIndex];
+      password.push(randomChar)
+
     }
-   
+    
+    password = scrambleString(uglifyString(password.join('')));
 
-    return new_password
+    displayPassword(password);
+
+    
 }
-
-
-
-const checkboxes = document.querySelector('.checkbox-wrapper').querySelectorAll('div');
-const submitBtn = document.querySelector(".submit-btn");
-
-submitBtn.addEventListener('click', () => handleSubmit());
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('click', (e) => handleCheckboxClick(e))
-})
 
 const handleCheckboxClick = (e) => {
     e.stopPropagation();
@@ -77,8 +77,16 @@ const handleCheckboxClick = (e) => {
     (isChecked) ? clickedBox.classList.remove('checked') : clickedBox.classList.add('checked');
     
 }
+const displayPassword = (password) => {
+  const display = document.querySelector('.password');
+  display.value = password;
+
+  
+}
+
 
 const handleSubmit = () => {
+  
     const availableChars = [];
     const charTypes = {
       'symbols':  ['!', '@', '#', '$', '%', '&', '*'],
@@ -94,5 +102,18 @@ const handleSubmit = () => {
 
     })
 
-    password_generator(availableChars, chooseRandomNumber(MAX_PASSWORD_LENGTH));
+    if (availableChars.length == 0) {displayPassword("Choose parameters"); return;}
+
+    const charAmount = chooseRandomNumber(MAX_PASSWORD_LENGTH);
+    password_generator(availableChars, (charAmount > MIN_PASSWORD_LENGTH) ? charAmount : MIN_PASSWORD_LENGTH);
 }
+
+
+
+const checkboxes = document.querySelector('.checkbox-wrapper').querySelectorAll('div');
+const submitBtn = document.querySelector(".submit-btn");
+
+submitBtn.addEventListener('click', () => handleSubmit());
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('click', (e) => handleCheckboxClick(e))
+})
